@@ -4,15 +4,15 @@
 # argument is given, session name will be based on layout file name.
 if initialize_session "dotfiles"; then
 
-    # Create a new window inline within session layout definition.
-    window_root "~/dotfiles"
-    new_window "dotfiles"
+    window_root "~/cyborgV2"
+    new_window "Cyborg V2"
+
 
     window_root "~/cyborg/"
     new_window "cyborg"
 
-    window_root "~/.dotfiles"
-    new_window "old dotfiles"
+    window_root "~/dotfiles"
+    new_window "dotfiles"
 
     select_window 1
 fi
