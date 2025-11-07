@@ -1,0 +1,5 @@
+venv
+.env
+.direnv/
+ssh/dot-ssh/known*
+zsh/.zsh_history
