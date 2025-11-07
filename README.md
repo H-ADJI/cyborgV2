@@ -19,7 +19,10 @@ Complete setup scripts available [here](https://github.com/H-ADJI/cyborg)
 ### Browser
 
 - quteBrowser
+- passwords
 - ytb on mpv
+- keybinds
+- eyecandy
 - PWAs on chromium
 
 ### Dotfiles
@@ -35,6 +38,13 @@ Complete setup scripts available [here](https://github.com/H-ADJI/cyborg)
 ### Editor
 
 - handcrafted / minimalist nvim config
+- file exp
+- fuzzy finder
+- syntax highlighting
+- sane opt
+- lsp
+- formatters
+- colorscheme
 - fallback vscode config
 
 ### Desktop Environment
@@ -42,6 +52,7 @@ Complete setup scripts available [here](https://github.com/H-ADJI/cyborg)
 - hyprland
 - programs launcher / widget menus
 - minimalistic status bar
+- hypr plugins
 
 ### other ideas
 
