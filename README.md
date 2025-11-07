@@ -53,6 +53,7 @@ Complete setup scripts available [here](https://github.com/H-ADJI/cyborg)
 - programs launcher / widget menus
 - minimalistic status bar
 - hypr plugins
+- hypr sunset config and controls
 
 ### other ideas
 
