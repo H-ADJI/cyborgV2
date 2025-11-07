@@ -23,6 +23,7 @@ Complete setup scripts available [here](https://github.com/H-ADJI/cyborg)
 - ytb on mpv
 - keybinds
 - eyecandy
+- image magnifier plugin
 - PWAs on chromium
 
 ### Dotfiles

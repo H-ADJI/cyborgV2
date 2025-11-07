@@ -1,24 +1,14 @@
--- Set <space> as the leader key
 -- See `:help mapleader`
--- NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- [[ Setting options ]] See `:h vim.o`
--- NOTE: You can change these options as you wish!
--- For more options, you can see `:help option-list`
 -- To see documentation for an option, you can use `:h 'optionname'`, for example `:h 'number'`
--- (Note the single quotes)
-
--- Print the line number in front of each line
 vim.o.number = true
-
--- Use relative line numbers, so that it is easier to jump with j, k. This will affect the 'number'
--- option above, see `:h number_relativenumber`
+vim.o.tabstop = 4
+vim.o.wrap = false
 vim.o.relativenumber = true
+vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
+vim.keymap.set('n', 'zz', ':q<CR>')
 
 -- Sync clipboard between OS and Neovim. Schedule the setting after `UiEnter` because it can
 -- increase startup-time. Remove this option if you want your OS clipboard to remain independent.
@@ -37,7 +27,7 @@ vim.o.smartcase = true
 vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
+vim.o.scrolloff = 20
 
 -- Show <tab> and trailing spaces
 vim.o.list = true
