@@ -8,7 +8,14 @@ return {
 		{
 			'<leader>e',
 			function()
-				require("mini.files").open()
+				if not MiniFiles.close() then MiniFiles.open() end
+			end,
+			desc = 'Open Mini Files',
+		},
+		{
+			'<Esc>',
+			function()
+				if not MiniFiles.close() then vim.cmd(":nohlsearch") end
 			end,
 			desc = 'Open Mini Files',
 		},

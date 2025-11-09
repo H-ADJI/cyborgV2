@@ -17,6 +17,19 @@ return {
 	end,
 	keys = {
 		{
+			"<leader><leader>",
+			function()
+				require("mini.pick").builtin.files()
+			end,
+		},
+		{
+			"<leader>ff",
+			function()
+				require("mini.pick").builtin.files()
+			end,
+			desc = "[F]ind [F]ile",
+		},
+		{
 			"<leader>flg",
 			function()
 				require("mini.pick").builtin.grep_live()
@@ -29,6 +42,20 @@ return {
 				require("mini.pick").builtin.grep()
 			end,
 			desc = "[F]ile [G]rep",
+		},
+		{
+			"<leader>sh",
+			function()
+				require("mini.pick").builtin.help()
+			end,
+			desc = "[S]earch [H]elp",
+		},
+		{
+			"<leader>fb",
+			function()
+				require("mini.pick").builtin.buffers()
+			end,
+			desc = "[F]ind [B]uffer",
 		},
 	}
 }
