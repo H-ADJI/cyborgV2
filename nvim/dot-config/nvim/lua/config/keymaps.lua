@@ -15,7 +15,7 @@ map("n", "<leader>o",
     function()
         vim.cmd("update")
         vim.cmd("source")
-        print("Config loaded")
+        vim.notify("Config re-loaded")
     end,
     { desc = "S[o]urce config" }
 )
