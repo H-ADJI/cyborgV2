@@ -3,6 +3,7 @@ return {
   -- optional: provides snippets for the snippet source
   dependencies = { "rafamadriz/friendly-snippets" },
   -- use a release tag to download pre-built binaries
+  enabled = true,
   version = "1.*",
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
@@ -23,8 +24,11 @@ return {
       nerd_font_variant = "mono",
     },
     completion = {
-      documentation = { auto_show = false, treesitter_highlighting = true },
       accept = { auto_brackets = { enabled = true } },
+      documentation = {
+        auto_show = false,
+        treesitter_highlighting = true,
+      },
       menu = {
         auto_show = true,
       },

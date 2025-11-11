@@ -6,7 +6,7 @@ return {
 	end,
 	keys = {
 		{
-			'<leader>e',
+			'<leader>fe',
 			function()
 				if not MiniFiles.close() then MiniFiles.open() end
 			end,
