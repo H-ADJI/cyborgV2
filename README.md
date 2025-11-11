@@ -76,3 +76,5 @@ Complete setup scripts available [here](https://github.com/H-ADJI/cyborg)
 - default apps
 - screen recording
 - change utilities launcher
+- split post pre spotify install
+- auto config spicetify addons
