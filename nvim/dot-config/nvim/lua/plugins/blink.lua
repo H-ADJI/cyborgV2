@@ -18,6 +18,7 @@ return {
       ["<C-u>"] = { "scroll_signature_up", "scroll_documentation_up", "fallback" },
       ["<C-d>"] = { "scroll_signature_down", "scroll_documentation_down", "fallback" },
       ["<C-k>"] = { "select_prev", "show_signature", "hide_signature", "fallback" },
+      ["<C-o>"] = { "accept", "fallback" },
       ["<C-j>"] = { "select_next", "fallback" },
     },
     appearance = {
@@ -43,7 +44,7 @@ return {
         ["<C-k>"] = { "select_prev", "fallback" },
         ["<C-j>"] = { "select_next", "fallback" },
         ["<ESC>"] = { "hide", "fallback" },
-        -- ["<CR>"] = { "accept", "fallback" },
+        ["<C-o>"] = { "accept", "fallback" },
       },
       completion = { menu = { auto_show = false } },
     },
