@@ -11,7 +11,7 @@ map("n", "<leader>ll",
     end,
     { desc = "[L]azy Dashboard" }
 )
-map("n", "<leader>o",
+map("n", "<leader>so",
     function()
         vim.cmd("update")
         vim.cmd("source")
