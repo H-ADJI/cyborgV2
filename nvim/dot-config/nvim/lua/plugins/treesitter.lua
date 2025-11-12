@@ -3,6 +3,9 @@ return {
   branch = "master",
   lazy = false,
   build = ":TSUpdate",
+  -- opts = {
+  --   folds = { enable = true },
+  -- },
   config = function()
     require("nvim-treesitter.configs").setup({
       ensure_installed = {

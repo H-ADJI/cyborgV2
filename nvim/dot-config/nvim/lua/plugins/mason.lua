@@ -29,14 +29,15 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "ty",
+                "ruff",
                 "bash-language-server",
                 "marksman",
                 "markdownlint",
+                "biome",
                 -- toml
                 "taplo",
                 -- python stuff
                 -- "pyright",
-                -- "ruff",
                 -- golang stuff
                 -- "gopls",
                 -- "iferr",
@@ -44,7 +45,6 @@ return {
                 -- "golines",
                 -- javascript
                 -- "typescript-language-server",
-                -- "biome",
                 -- "eslint-lsp",
                 -- "css-lsp",
                 -- "html-lsp",

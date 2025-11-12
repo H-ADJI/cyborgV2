@@ -21,3 +21,5 @@ vim.o.cursorline = true
 vim.o.scrolloff = 20
 vim.o.confirm = true
 vim.opt.fillchars:append({ eob = " " })
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
