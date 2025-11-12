@@ -1,4 +1,4 @@
 return {
-	"neovim/nvim-lspconfig",
-	keys = {},
+  "neovim/nvim-lspconfig",
+  keys = {},
 }

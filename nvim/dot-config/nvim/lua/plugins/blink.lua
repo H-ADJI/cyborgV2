@@ -10,7 +10,7 @@ return {
   opts = {
     signature = {
       enabled = true,
-      window = { show_documentation = true },
+      window = { show_documentation = false },
     },
     keymap = {
       preset = "enter",
@@ -26,7 +26,7 @@ return {
     completion = {
       accept = { auto_brackets = { enabled = true } },
       documentation = {
-        auto_show = false,
+        auto_show = true,
         treesitter_highlighting = true,
       },
       menu = {
