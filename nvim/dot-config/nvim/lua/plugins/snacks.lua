@@ -419,6 +419,22 @@ return {
         Snacks.toggle.indent():map("<leader>ug")
         Snacks.toggle.dim():map("<leader>uD")
         Snacks.toggle.words():map("<leader>uW")
+        Snacks.toggle("diagnostics", {
+          name = "Verbose Diagnostics",
+          get = function()
+            -- Check current diagnostic config
+            local cfg = vim.diagnostic.config()
+            if cfg then
+              return cfg.virtual_lines
+            end
+            return false
+          end,
+          set = function(state)
+            vim.diagnostic.config({
+              virtual_lines = state,
+            })
+          end,
+        }):map("<leader>uvd")
       end,
     })
   end,

@@ -20,3 +20,7 @@ vim.o.scrolloff = 20
 vim.o.confirm = true
 vim.o.undofile = true
 vim.opt.fillchars:append({ eob = " " })
+-- vim.diagnostic.config({
+  -- virtual_lines = true,
+  -- virtual_text = true,
+-- })
