@@ -73,7 +73,7 @@ return {
         zindex = 50,
       },
     },
-    words = { enabled = true },
+    words = { enabled = false },
     -- input = { enabled = true },
     -- scope = { enabled = true },
   },
