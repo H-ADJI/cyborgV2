@@ -1,6 +1,6 @@
 return {
   "lewis6991/gitsigns.nvim",
-  event = { "BufReadPre", "BufNewFile" }, -- load on file open
+  event = "VeryLazy",
   opts = function(_, opts)
     Snacks.toggle({
       name = "Git Blame line",
