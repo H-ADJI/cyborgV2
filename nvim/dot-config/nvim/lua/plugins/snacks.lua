@@ -20,7 +20,6 @@ return {
       only_scope = false, -- only show indent guides of the scope
       only_current = true, -- only show indent guides in the current window
     },
-    -- input = { enabled = true },
     picker = {
       enabled = true,
     },
@@ -28,8 +27,6 @@ return {
       enabled = true,
       timeout = 1500,
     },
-    -- quickfile = { enabled = true },
-    -- scope = { enabled = true },
     scroll = {
       enabled = true,
       animate = {
@@ -43,11 +40,23 @@ return {
         easing = "linear",
       },
     },
-    toggle = {},
-    -- statuscolumn = {
-    --   enabled = true,
-    -- },
+    toggle = {
+      enabled = false,
+    },
+    statuscolumn = {
+      enabled = false,
+      folds = {
+        open = true, -- show open fold icons
+        git_hl = true, -- use Git Signs hl for fold icons
+      },
+      git = {
+        patterns = { "GitSign", "MiniDiffSign" },
+      },
+    },
     -- words = { enabled = true },
+    -- quickfile = { enabled = true },
+    -- input = { enabled = true },
+    -- scope = { enabled = true },
   },
   keys = {
     {
