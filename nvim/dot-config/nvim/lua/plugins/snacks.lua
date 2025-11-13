@@ -61,12 +61,30 @@ return {
         patterns = { "GitSign", "MiniDiffSign" },
       },
     },
+    quickfile = { enabled = true },
+    terminal = {
+      win = {
+        style = "terminal",
+        position = "float",
+        backdrop = false,
+        border = true,
+        height = 0.8,
+        width = 0.8,
+        zindex = 50,
+      },
+    },
     -- words = { enabled = true },
-    -- quickfile = { enabled = true },
     -- input = { enabled = true },
     -- scope = { enabled = true },
   },
   keys = {
+    {
+      "<leader>sk",
+      function()
+        Snacks.picker.keymaps()
+      end,
+      desc = "Keymaps",
+    },
     {
       "<leader>n",
       function()
@@ -357,6 +375,13 @@ return {
       end,
       desc = "[G]it [O]pen File in Repo",
       mode = { "n", "v" },
+    },
+    {
+      "<leader>tt",
+      function()
+        Snacks.terminal()
+      end,
+      desc = "Toggle Terminal",
     },
   },
   init = function()
