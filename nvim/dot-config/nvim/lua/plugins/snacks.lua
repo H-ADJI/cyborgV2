@@ -1,3 +1,4 @@
+local s = 2
 return {
   "folke/snacks.nvim",
   priority = 1000,
@@ -11,6 +12,11 @@ return {
     },
     dashboard = {
       enabled = true,
+      sections = {
+        { section = "header" },
+        -- { section = "keys", gap = 1, padding = 1 },
+        { section = "startup" },
+      },
     },
     explorer = {
       enabled = true,
@@ -315,6 +321,27 @@ return {
         Snacks.picker.colorschemes()
       end,
       desc = "Colorschemes",
+    },
+    {
+      "<leader>bdo",
+      function()
+        Snacks.bufdelete.other()
+      end,
+      desc = "Delete Other Buffer",
+    },
+    {
+      "<leader>bda",
+      function()
+        Snacks.bufdelete.all()
+      end,
+      desc = "Delete All Buffer",
+    },
+    {
+      "<leader>bdd",
+      function()
+        Snacks.bufdelete()
+      end,
+      desc = "Delete current Buffer",
     },
   },
   init = function()
