@@ -47,7 +47,7 @@ Complete setup scripts available [here](https://github.com/H-ADJI/cyborg)
 - fallback vscode config
 - snacks plugins
 - mini plugins
-- telescope / fzf  pickers
+- telescope / fzf pickers
 - lazyvim inspiration
 - better dashboard
 
@@ -80,3 +80,4 @@ Complete setup scripts available [here](https://github.com/H-ADJI/cyborg)
 - auto config spicetify addons
 - run all tmux session in bg
 - connect tmux / nvim over ssh
+- arch packages info , search , installed , installer picker
