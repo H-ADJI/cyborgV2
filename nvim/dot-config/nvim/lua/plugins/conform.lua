@@ -1,10 +1,11 @@
 return {
   "stevearc/conform.nvim",
   keys = {
+    { "<leader>lf", vim.cmd("ConformInfo"), desc = "conform formatters information" },
     {
       "<leader>gg",
       function()
-        require("conform").format({ async = false, lsp_format = "fallback" })
+        require("conform").format()
       end,
       mode = { "n", "v" },
       desc = "[F]ormat buffer",
@@ -12,6 +13,7 @@ return {
   },
   opts = {
     formatters_by_ft = {
+      lua = { "stylua" },
       python = { "ruff_format", "ruff_organize_imports", "ruff_fix" },
       go = { "gofmt", "golines", "goimports" },
       html = { "prettierd" },
