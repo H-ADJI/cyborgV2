@@ -1,7 +1,13 @@
 return {
   "stevearc/conform.nvim",
   keys = {
-    { "<leader>lf", vim.cmd("ConformInfo"), desc = "conform formatters information" },
+    {
+      "<leader>fi",
+      function()
+        vim.cmd("ConformInfo")
+      end,
+      desc = "[F]ormatters [I]nfo",
+    },
     {
       "<leader>gg",
       function()
