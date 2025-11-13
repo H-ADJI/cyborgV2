@@ -78,6 +78,6 @@ Complete setup scripts available [here](https://github.com/H-ADJI/cyborg)
 - change utilities launcher
 - split post pre spotify install
 - auto config spicetify addons
-- run all tmux session in bg
+- replace tmuxifier with tmuxp
 - connect tmux / nvim over ssh
 - arch packages info , search , installed , installer picker
