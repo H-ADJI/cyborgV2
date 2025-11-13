@@ -18,4 +18,5 @@ vim.o.smartcase = true
 vim.o.cursorline = true
 vim.o.scrolloff = 20
 vim.o.confirm = true
+vim.o.undofile = true
 vim.opt.fillchars:append({ eob = " " })

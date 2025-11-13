@@ -73,7 +73,7 @@ return {
         zindex = 50,
       },
     },
-    -- words = { enabled = true },
+    words = { enabled = true },
     -- input = { enabled = true },
     -- scope = { enabled = true },
   },
@@ -383,6 +383,22 @@ return {
       end,
       desc = "Toggle Terminal",
     },
+    {
+      "]]",
+      function()
+        Snacks.words.jump(vim.v.count1)
+      end,
+      desc = "Next Reference",
+      mode = { "n", "t" },
+    },
+    {
+      "[[",
+      function()
+        Snacks.words.jump(-vim.v.count1)
+      end,
+      desc = "Prev Reference",
+      mode = { "n", "t" },
+    },
   },
   init = function()
     vim.api.nvim_create_autocmd("User", {
@@ -402,6 +418,7 @@ return {
         Snacks.toggle.inlay_hints():map("<leader>uh")
         Snacks.toggle.indent():map("<leader>ug")
         Snacks.toggle.dim():map("<leader>uD")
+        Snacks.toggle.words():map("<leader>uW")
       end,
     })
   end,
