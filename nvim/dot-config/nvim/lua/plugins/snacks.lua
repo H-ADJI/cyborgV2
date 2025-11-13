@@ -343,6 +343,21 @@ return {
       end,
       desc = "Delete current Buffer",
     },
+    {
+      "<leader>gbL",
+      function()
+        Snacks.git.blame_line()
+      end,
+      desc = "[G]it [B]lame [L]ine",
+    },
+    {
+      "<leader>go",
+      function()
+        Snacks.gitbrowse()
+      end,
+      desc = "[G]it [O]pen File in Repo",
+      mode = { "n", "v" },
+    },
   },
   init = function()
     vim.api.nvim_create_autocmd("User", {
