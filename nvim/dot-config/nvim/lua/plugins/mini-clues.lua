@@ -1,5 +1,6 @@
 return {
   "nvim-mini/mini.clue",
+  enabled = false,
   version = false,
   -- config = function()
   --   require("mini.clue").setup({
