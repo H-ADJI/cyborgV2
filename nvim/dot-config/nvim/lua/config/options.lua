@@ -8,8 +8,6 @@ vim.o.expandtab = true
 vim.o.shiftwidth = 4
 vim.o.softtabstop = 4
 vim.o.tabstop = 8
-vim.o.signcolumn = "no"
--- Show <tab> and trailing spaces
 vim.o.list = false
 vim.o.wrap = false
 vim.o.winborder = "rounded"
@@ -21,5 +19,3 @@ vim.o.cursorline = true
 vim.o.scrolloff = 20
 vim.o.confirm = true
 vim.opt.fillchars:append({ eob = " " })
--- vim.opt.foldmethod = "expr"
--- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
