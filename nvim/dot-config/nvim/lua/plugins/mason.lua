@@ -36,6 +36,8 @@ return {
         "lua_ls",
         "ty",
         "ruff",
+        "flake8",
+        "mypy",
         "pyrefly",
         "bash-language-server",
         "marksman",
