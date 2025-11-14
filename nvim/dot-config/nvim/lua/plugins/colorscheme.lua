@@ -1,52 +1,79 @@
 return {
   {
     "xiyaowong/transparent.nvim",
+    -- Optional, you don't have to run setup.
+    config = function()
+      require("transparent").setup({
+        -- table: default groups
+        groups = {
+          "Normal",
+          "NormalNC",
+          "Comment",
+          "Constant",
+          "Special",
+          "Identifier",
+          "Statement",
+          "PreProc",
+          "Type",
+          "Underlined",
+          "Todo",
+          "String",
+          "Function",
+          "Conditional",
+          "Repeat",
+          "Operator",
+          "Structure",
+          "LineNr",
+          "NonText",
+          "SignColumn",
+          "CursorLine",
+          "CursorLineNr",
+          "StatusLine",
+          "StatusLineNC",
+          "EndOfBuffer",
+        },
+        -- table: additional groups that should be cleared
+        extra_groups = {
+          "WhichKeyNormal",
+          -- "SnackNormal", -- for floating windows like help and terminal
+          "SnackBorder",
+          "SnackTitle",
+          "SnackPrompt",
+          "SnackPreview",
+          "SnackResults",
+          "SnackScrollbar",
+          "SnackScrollbarThumb",
+          "SnacksBackdrop",
+          "SnacksNormalNC",
+          "SnacksWinBar",
+          "SnacksWinBarNC",
+          "SnacksPicker",
+          "SnacksPickerBorder",
+          "SnacksPickerInput",
+          "SnacksPickerPrompt",
+          "SnacksPickerList",
+          "SnacksPickerPreview",
+          "SnacksPickerScrollbar",
+          "SnacksPickerScrollbarThumb",
+          "SnacksPickerCursorLine",
+        },
+        -- table: groups you don't want to clear
+        exclude_groups = {},
+        -- function: code to be executed after highlight groups are cleared
+        -- Also the user event "TransparentClear" will be triggered
+        on_clear = function() end,
+      })
+    end,
   },
   {
-    "baliestri/aura-theme",
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    config = function(plugin)
-      vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
-      vim.cmd([[colorscheme aura-soft-dark-soft-text]])
-    end,
-  },
-  {
-    "EdenEast/nightfox.nvim",
-    enabled = false,
-    priority = 1000,
     config = function()
-      require("nightfox").setup({
-        -- optional configuration here
-        options = {
-          transparent = true,
-        },
+      require("tokyonight").setup({
+        transparent = true, -- Enable this to disable setting the background color
       })
-      vim.cmd("colorscheme carbonfox")
-    end,
-  },
-  {
-    "rebelot/kanagawa.nvim",
-    enabled = false,
-    config = function()
-      require("kanagawa").setup({
-        -- optional configuration here
-        transparent = true,
-      })
-      vim.cmd("colorscheme kanagawa-dragon")
-    end,
-  },
-  {
-    "vague-theme/vague.nvim",
-    -- lazy = false,
-    enabled = false,
-    priority = 1000,
-    config = function()
-      require("vague").setup({
-        -- optional configuration here
-        transparent = true,
-      })
-      vim.cmd("colorscheme vague")
+      vim.cmd([[colorscheme tokyonight]])
     end,
   },
 }

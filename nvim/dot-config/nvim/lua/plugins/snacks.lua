@@ -65,8 +65,8 @@ return {
       win = {
         style = "terminal",
         position = "float",
-        backdrop = false,
-        border = true,
+        backdrop = true,
+        border = false,
         height = 0.8,
         width = 0.8,
         zindex = 50,
