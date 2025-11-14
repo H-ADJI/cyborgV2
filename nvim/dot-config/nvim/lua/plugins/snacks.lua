@@ -398,6 +398,13 @@ return {
       desc = "Prev Reference",
       mode = { "n", "t" },
     },
+    {
+      "<leader>lsc",
+      function()
+        Snacks.picker.lsp_config()
+      end,
+      desc = "Lsp Info",
+    },
   },
   init = function()
     vim.api.nvim_create_autocmd("User", {
