@@ -15,7 +15,13 @@ return {
   },
   {
     "mason-org/mason-lspconfig.nvim",
-    opts = {},
+    opts = {
+      automatic_enable = {
+        "lua_ls",
+        "pyright",
+        "ruff",
+      },
+    },
     dependencies = {
       { "mason-org/mason.nvim", opts = {} },
       "neovim/nvim-lspconfig",
@@ -30,6 +36,7 @@ return {
         "lua_ls",
         "ty",
         "ruff",
+        "pyrefly",
         "bash-language-server",
         "marksman",
         "markdownlint",

@@ -3,6 +3,8 @@ return {
   event = "VeryLazy",
   opts = {
     lsp = {
+      -- fix for ruff lsp showing notification missing capabilities notification
+      hover = { silent = true },
       signature = {
         auto_open = { enabled = false },
       },

@@ -1,4 +1,3 @@
-local s = 2
 return {
   "folke/snacks.nvim",
   priority = 1000,

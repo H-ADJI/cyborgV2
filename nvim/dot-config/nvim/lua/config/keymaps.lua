@@ -36,18 +36,21 @@ map({ "n" }, "<a-k>", "<c-w>k")
 
 map({ "n" }, "<a-l>", "<c-w>l")
 
-map("n", "<leader>od", vim.diagnostic.open_float, { desc = "[O]pen [D]iagnostics" })
+local formated_diagnostics = function()
+  local diagnostic_format = function(diagnostic)
+    return string.format("%s [%s]", diagnostic.message, diagnostic.source or "unknown source")
+  end
+  vim.diagnostic.open_float(nil, {
+    format = diagnostic_format,
+  })
+end
+
+map("n", "<leader>od", formated_diagnostics, { desc = "[O]pen [D]iagnostics" })
 
 map("n", "<leader>nd", function()
   vim.diagnostic.jump({ count = 1 })
-  vim.defer_fn(function()
-    vim.diagnostic.open_float()
-  end, 200)
 end, { desc = "[N]ext [D]iagnostics" })
 
 map("n", "<leader>pd", function()
   vim.diagnostic.jump({ count = -1 })
-  vim.defer_fn(function()
-    vim.diagnostic.open_float()
-  end, 200)
 end, { desc = "[P]rev [D]iagnostics" })

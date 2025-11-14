@@ -9,6 +9,8 @@ return {
       desc = "[L]anguage [S]ervers [I]nfo",
     },
   },
+  -- opts = {},
+  -- config call is necessary for some reason
   config = function()
     -- vim.lsp.config()
   end,
