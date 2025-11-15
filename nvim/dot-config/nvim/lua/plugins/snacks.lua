@@ -92,21 +92,21 @@ return {
       desc = "Notification History",
     },
     {
-      "gd",
+      "cfd",
       function()
         Snacks.picker.lsp_definitions()
       end,
       desc = "Goto Definition",
     },
     {
-      "gD",
+      "cfD",
       function()
         Snacks.picker.lsp_declarations()
       end,
       desc = "Goto Declaration",
     },
     {
-      "gr",
+      "cfr",
       function()
         Snacks.picker.lsp_references()
       end,
@@ -114,14 +114,14 @@ return {
       desc = "References",
     },
     {
-      "gI",
+      "cfI",
       function()
         Snacks.picker.lsp_implementations()
       end,
       desc = "Goto Implementation",
     },
     {
-      "gy",
+      "cft",
       function()
         Snacks.picker.lsp_type_definitions()
       end,
