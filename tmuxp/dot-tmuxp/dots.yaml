@@ -1,0 +1,11 @@
+session_name: Dotfiles
+suppress_history: true
+start_directory: ${HOME}/cyborgV2/
+windows:
+  - window_name: "cyborgV2"
+    shell_command_before: nvim
+    focus: true
+  - window_name: "cyborg"
+    start_directory: ~/cyborg/
+  - window_name: "dotfiles"
+    start_directory: ~/dotfiles/
