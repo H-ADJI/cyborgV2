@@ -35,7 +35,8 @@ return {
         -- table: additional groups that should be cleared
         extra_groups = {
           "WhichKeyNormal",
-          -- "SnackNormal", -- for floating windows like help and terminal
+          "WhichKeyTitle",
+          "WhichKeyBorder",
           "SnackBorder",
           "SnackTitle",
           "SnackPrompt",
@@ -50,6 +51,7 @@ return {
           "SnacksPicker",
           "SnacksPickerBorder",
           "SnacksPickerInput",
+          "SnacksPickerPreviewTitle",
           "SnacksPickerPrompt",
           "SnacksPickerList",
           "SnacksPickerPreview",
@@ -58,21 +60,25 @@ return {
           "SnacksPickerCursorLine",
         },
         -- table: groups you don't want to clear
-        exclude_groups = {},
         -- function: code to be executed after highlight groups are cleared
         -- Also the user event "TransparentClear" will be triggered
-        on_clear = function() end,
+        on_clear = function()
+          require("transparent").clear_prefix("SnacksNotifier")
+          -- require("transparent").clear_prefix("SnacksNotifier")
+          -- require("transparent").clear_prefix("Blink")
+        end,
       })
     end,
   },
   {
+
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      require("tokyonight").setup({
-        transparent = true, -- Enable this to disable setting the background color
-      })
+      -- require("tokyonight").setup({
+      --   transparent = true, -- Enable this to disable setting the background color
+      -- })
       vim.cmd([[colorscheme tokyonight]])
     end,
   },

@@ -66,7 +66,7 @@ return {
         style = "terminal",
         position = "float",
         backdrop = true,
-        border = false,
+        border = true,
         height = 0.8,
         width = 0.8,
         zindex = 50,
