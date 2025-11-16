@@ -38,18 +38,7 @@ Complete setup scripts available [here](https://github.com/H-ADJI/cyborg)
 
 ### Editor
 
-- handcrafted / minimalist nvim config
-- syntax highlighting
-- sane opt
-- lsp
-- formatters
-- colorscheme
 - fallback vscode config
-- snacks plugins
-- mini plugins
-- telescope / fzf pickers
-- lazyvim inspiration
-- better dashboard
 
 ### Desktop Environment
 
