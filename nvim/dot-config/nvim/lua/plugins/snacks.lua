@@ -65,7 +65,7 @@ return {
       win = {
         style = "terminal",
         position = "float",
-        backdrop = true,
+        backdrop = 60,
         border = true,
         height = 0.8,
         width = 0.8,
@@ -78,19 +78,27 @@ return {
   },
   keys = {
     {
+      "<leader><space>",
+      function()
+        Snacks.picker.smart()
+      end,
+      desc = "Smart Find Files",
+    },
+    {
       "<leader>sk",
       function()
         Snacks.picker.keymaps()
       end,
-      desc = "Keymaps",
+      desc = "[S]earch Keymaps",
     },
     {
-      "<leader>n",
+      "<leader>sn",
       function()
         Snacks.picker.notifications()
       end,
-      desc = "Notification History",
+      desc = "[S]earch [N]otification History",
     },
+    -- LSP stuff
     {
       "cfd",
       function()
@@ -155,33 +163,15 @@ return {
       end,
       desc = "LSP Workspace Symbols",
     },
-    {
-      "<leader><space>",
-      function()
-        Snacks.picker.smart()
-      end,
-      desc = "Smart Find Files",
-    },
+    -- LSP stuff
+    -- Git pickers
+    -- File pickers
     {
       "<leader>e",
       function()
         Snacks.explorer()
       end,
-      desc = "File Explorer",
-    },
-    {
-      "<leader>ts",
-      function()
-        Snacks.scratch()
-      end,
-      desc = "Toggle Scratch Buffer",
-    },
-    {
-      "<leader>os",
-      function()
-        Snacks.scratch.select()
-      end,
-      desc = "Select Scratch Buffer",
+      desc = "File [E]xplorer",
     },
     {
       "<leader>sb",
@@ -234,7 +224,7 @@ return {
       desc = "Find Files",
     },
     {
-      "<leader>fg",
+      "<leader>fG",
       function()
         Snacks.picker.git_files()
       end,
@@ -245,14 +235,14 @@ return {
       function()
         Snacks.picker.recent()
       end,
-      desc = "Recent",
+      desc = "Find Recent",
     },
     {
       "<leader>fp",
       function()
         Snacks.picker.projects()
       end,
-      desc = "Projects",
+      desc = "Find Projects",
     },
     {
       "<leader>gl",
@@ -376,13 +366,6 @@ return {
       mode = { "n", "v" },
     },
     {
-      "<leader>tt",
-      function()
-        Snacks.terminal()
-      end,
-      desc = "Toggle Terminal",
-    },
-    {
       "]]",
       function()
         Snacks.words.jump(vim.v.count1)
@@ -404,6 +387,27 @@ return {
         Snacks.picker.lsp_config()
       end,
       desc = "Lsp Info",
+    },
+    {
+      "<leader>tt",
+      function()
+        Snacks.terminal()
+      end,
+      desc = "Toggle Terminal",
+    },
+    {
+      "<leader>ts",
+      function()
+        Snacks.scratch()
+      end,
+      desc = "[T]oggle [S]cratch Buffer",
+    },
+    {
+      "<leader>cs",
+      function()
+        Snacks.scratch.select()
+      end,
+      desc = "[C]hoose [S]cratch Buffer",
     },
   },
   init = function()
