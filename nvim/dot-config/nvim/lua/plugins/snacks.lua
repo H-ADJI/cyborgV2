@@ -100,6 +100,13 @@ return {
     },
     -- LSP stuff
     {
+      "<leader>lsc",
+      function()
+        Snacks.picker.lsp_config()
+      end,
+      desc = "Lsp Info",
+    },
+    {
       "cfd",
       function()
         Snacks.picker.lsp_definitions()
@@ -380,13 +387,6 @@ return {
       end,
       desc = "Prev Reference",
       mode = { "n", "t" },
-    },
-    {
-      "<leader>lsc",
-      function()
-        Snacks.picker.lsp_config()
-      end,
-      desc = "Lsp Info",
     },
     {
       "<leader>tt",
