@@ -24,6 +24,9 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     if vim.api.nvim_win_get_config(0).relative ~= "" then
       return
     end
+    if vim.tbl_contains(vim.v.argv, "+Man!") then
+      return
+    end
     -- Delay closing + floating until after the buffer is populated
     vim.schedule(function()
       local win = vim.fn.bufwinid(buf)
