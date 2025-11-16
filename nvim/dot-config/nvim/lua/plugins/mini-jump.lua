@@ -1,6 +1,7 @@
 return {
   "nvim-mini/mini.jump",
   version = false,
+  enabled = false,
   opts = {
     delay = {
       -- Delay between jump and highlighting all possible jumps
