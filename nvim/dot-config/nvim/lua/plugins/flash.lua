@@ -10,7 +10,7 @@ return {
     { "S", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
     { "R", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
     { "r", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-    { "<ESC>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+    -- { "<ESC>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     -- Simulate nvim-treesitter incremental selection
     { "<c-space>", mode = { "n", "o", "x" },
       function()

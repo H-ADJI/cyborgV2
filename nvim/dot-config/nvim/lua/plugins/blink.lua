@@ -31,10 +31,11 @@ return {
         treesitter_highlighting = true,
       },
       menu = {
-        auto_show = true,
+        auto_show = false,
       },
       ghost_text = { enabled = true },
     },
+    snippets = { preset = "luasnip" },
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
     },

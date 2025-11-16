@@ -1,5 +1,6 @@
 return {
   "nvim-mini/mini.completion",
+  enabled = false,
   version = false,
   opts = {},
   config = function()
@@ -15,5 +16,4 @@ return {
     imap_expr("<C-j>", [[pumvisible() ? "\<C-n>" : "\<C-j>"]])
     imap_expr("<C-k>", [[pumvisible() ? "\<C-p>" : "\<C-k>"]])
   end,
-  enabled = false,
 }
