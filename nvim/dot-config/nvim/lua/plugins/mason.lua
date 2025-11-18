@@ -21,6 +21,7 @@ return {
         "pyright",
         "ruff",
         "bashls",
+        "hyprls",
       },
     },
     dependencies = {
@@ -36,6 +37,7 @@ return {
       ensure_installed = {
         "lua_ls",
         "ty",
+        "hyprls",
         "ruff",
         "flake8",
         "mypy",

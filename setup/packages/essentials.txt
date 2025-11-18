@@ -1,3 +1,5 @@
+meson
+cpio
 dunst
 pipewire
 wireplumber
