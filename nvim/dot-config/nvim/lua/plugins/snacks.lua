@@ -217,6 +217,13 @@ return {
       desc = "Command History",
     },
     {
+      "<leader>fh",
+      function()
+        Snacks.picker.files({ hidden = true, ignored = false })
+      end,
+      desc = "Find Hidden files",
+    },
+    {
       "<leader>fc",
       function()
         Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
@@ -401,6 +408,13 @@ return {
         Snacks.scratch()
       end,
       desc = "[T]oggle [S]cratch Buffer",
+    },
+    {
+      "<leader>fb",
+      function()
+        Snacks.picker.buffers()
+      end,
+      desc = "Buffers",
     },
     {
       "<leader>cs",
