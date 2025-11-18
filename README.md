@@ -41,6 +41,7 @@
 - keybinds list
 - PWAs using omarchy webapp install/launch scripts
 - notifications using mako instead of fnott
+- yt-x
 - output / input picker widget
 - pkill widget
 - xcompose for emojies
