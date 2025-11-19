@@ -12,7 +12,6 @@ docker
 eza
 fastfetch
 fd
-fnott
 fuzzel
 fzf
 gcc
