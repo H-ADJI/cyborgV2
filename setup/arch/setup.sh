@@ -82,6 +82,7 @@ post_install() {
     xdg-mime default mupdf.desktop application/pdf
     xdg-mime default imv.desktop image/jpg
     gum log -l info "[DONE] Default apps"
+    zsh
 }
 decrypt_secrets() {
     cd ~/cyborgV2/ || return 1

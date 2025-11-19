@@ -24,7 +24,6 @@ gum log -l info "[DONE] Spotify file permissions"
 
 gum log -l info "[START] Change shell to use ZSH"
 chsh -s "$(grep -E 'zsh$' /etc/shells | head -n1)"
-zsh
 gum log "[DONE] Change shell to use ZSH"
 
 gum log -l info "[START] Spicetify apply"
