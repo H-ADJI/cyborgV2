@@ -27,26 +27,12 @@ installpackages() {
         gum log -l info "[START] Installing $package"
         yay -Sq --noconfirm --noprogressbar --needed --disable-download-timeout "$package"
         gum log -l info "[DONE] Installing $package"
-    done <~/dotfiles/packages/arch/packages-pre.txt
+    done <~/cyborgV2/setup/arch/base.txt
 }
 post_install() {
     gum log -l info "[START] Chosing stable rust toolchain release"
     rustup default stable
     gum log -l info "[DONE] Chosing stable rust toolchain release"
-
-    gum log -l info "[START] installing multiple uv python versions"
-    py_versions=(
-        "3.12"
-        "3.11"
-        "3.10"
-        "3.9"
-    )
-    uv python install "${py_versions[@]}"
-    gum log -l info "[DONE] Installing multiple uv python versions"
-
-    gum log -l info "[START] Copying assets"
-    cp -r ~/dotfiles/assets ~/.config/
-    gum log -l info "[DONE] Copying assets"
 
     gum log -l info "[START] Installing TPM"
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -63,12 +49,6 @@ post_install() {
     gum log -l info "[START] install tmux plugins"
     sh ~/.tmux/plugins/tpm/bin/install_plugins
     gum log -l info "[DONE] install tmux plugins"
-
-    gum log -l info "[START] link tmuxifier layouts"
-    cd ~/dotfiles/ || return 1
-    stow tmuxifier
-    cd || return 1
-    gum log -l info "[DONE] link tmuxifier layouts"
 
     gum log -l info "[START] ssh setup"
     ssh_setup
@@ -110,9 +90,9 @@ post_install() {
     gum log -l info "[DONE] Default apps"
 }
 decrypt_secrets() {
-    cd ~/dotfiles/ || return 1
+    cd ~/cyborgV2/ || return 1
     VERIFY=1
-    STORED_HASH=$(cat lock.secure)
+    STORED_HASH=$(cat setup/lock.secure)
     while true; do
         MASTER_PASSWORD=$(
             gum input --prompt "Master Password> " --password
@@ -132,33 +112,26 @@ decrypt_secrets() {
     cd || return 1
 }
 link_dotfiles() {
-    cd ~/dotfiles/ || return 1
+    cd ~/cyborgV2/ || return 1
     dotfiles=(
         "nvim"
         "alacritty"
         "kitty"
         "zsh"
         "bin"
-        "fnott"
         "git"
-        "nwg-look"
-        "gtklock"
         "wlogout"
         "mako"
         "starship"
-        "gtk-3.0"
-        "sway"
         "waybar"
-        "cava"
         "direnv"
         "fuzzel"
-        "zellij"
         "leetcode"
         "ruff"
         "ssh"
         "tmux"
-        "wofi"
         "fastfetch"
+        "systemd"
         "systemd"
     )
     stow --adopt "${dotfiles[@]}"
@@ -181,18 +154,14 @@ personal_repos() {
         "secondBrain"
         "dicli"
         "presentations"
-        ".dotfiles"
         "homelab"
     )
     for PROJECT in "${projects[@]}"; do
         [ ! -d "$PROJECT" ] && git clone "git@github.com:H-ADJI/$PROJECT.git"
     done
-    cd ~/dotfiles/ || return 1
+    cd ~/cyborgV2/ || return 1
     git remote remove origin
-    git remote add origin git@github.com:H-ADJI/dotfiles.git
-    cd ~/cyborg/ || return 1
-    git remote remove origin
-    git remote add origin git@github.com:H-ADJI/cyborg.git
+    git remote add origin git@github.com:H-ADJI/cyborgV2.git
     cd || exit 1
 }
 
