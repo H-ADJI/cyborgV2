@@ -25,7 +25,7 @@ install_AUR_helper() {
 installpackages() {
     while read package; do
         gum log -l info "[START] Installing $package"
-        yay -Sq --noconfirm --noprogressbar --needed --disable-download-timeout "$package"
+        yay -Sq --noconfirm --noprogressbar --needed --disable-download-timeout "$package" >~/yay.log 2>&1
         gum log -l info "[DONE] Installing $package"
     done <~/cyborgV2/setup/arch/base.txt
 }
