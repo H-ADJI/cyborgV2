@@ -128,7 +128,7 @@ link_dotfiles() {
         "systemd"
         "systemd"
     )
-    stow --adopt "${dotfiles[@]}"
+    stow --adopt --dotfiles "${dotfiles[@]}"
     cd || return 1
 }
 docker_post_install() {

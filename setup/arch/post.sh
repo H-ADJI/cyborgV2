@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo --validate
 while read package; do
     gum log -l info "[START] Installing $package"
     yay -Sq --noconfirm --noprogressbar --needed --disable-download-timeout "$package"

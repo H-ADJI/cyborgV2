@@ -54,3 +54,22 @@ end, { desc = "[N]ext [D]iagnostics" })
 map("n", "<leader>pd", function()
   vim.diagnostic.jump({ count = -1 })
 end, { desc = "[P]rev [D]iagnostics" })
+
+vim.keymap.set("n", "<leader>pp", function()
+  local file_path = vim.fn.expand("%:p")
+  if file_path == "" then
+    file_path = "[No file opened]"
+  end
+  vim.notify(file_path)
+  vim.fn.setreg("+", file_path)
+end, { desc = "Show and copy current file path" })
+
+vim.keymap.set("n", "<leader>fx", function()
+  local file_path = vim.fn.expand("%:p") -- Full path of current buffer
+  if file_path == "" then
+    vim.notify("[No file opened]", vim.log.levels.ERROR)
+    return
+  end
+  vim.fn.system("chmod +x " .. vim.fn.shellescape(file_path))
+  vim.notify("Made " .. file_path .. " executable", vim.log.levels.INFO)
+end, { desc = "Make [F]ile e[X]ecutable (chmod +x)" })
