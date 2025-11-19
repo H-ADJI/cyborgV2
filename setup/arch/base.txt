@@ -56,7 +56,6 @@ transcrypt
 tree
 ttf-jetbrains-mono 
 ttf-jetbrains-mono-nerd
-unzip
 uv
 waybar
 wget
