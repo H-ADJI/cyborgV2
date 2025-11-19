@@ -3,7 +3,7 @@
 sudo --validate
 while read package; do
     gum log -l info "[START] Installing $package"
-    yay -Sq --noconfirm --noprogressbar --needed --disable-download-timeout "$package"
+    yay -Sq --noconfirm --noprogressbar --needed --disable-download-timeout "$package" >>~/yay.log 2>&1
     gum log -l info "[DONE] Installing $package"
 done <~/cyborgV2/setup/arch/other.txt
 
@@ -23,7 +23,7 @@ sudo chmod a+wr /opt/spotify/Apps -R
 gum log -l info "[DONE] Spotify file permissions"
 
 gum log -l info "[START] Change shell to use ZSH"
-chsh -s "$(which zsh)"
+chsh -s "$(grep -E 'zsh$' /etc/shells | head -n1)"
 zsh
 gum log "[DONE] Change shell to use ZSH"
 
