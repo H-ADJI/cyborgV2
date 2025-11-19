@@ -27,8 +27,6 @@ chsh -s "$(grep -E 'zsh$' /etc/shells | head -n1)"
 gum log "[DONE] Change shell to use ZSH"
 
 gum log -l info "[START] Spicetify apply"
-curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
-curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
 spicetify backup apply
 spicetify update
 spicetify apply

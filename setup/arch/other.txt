@@ -28,6 +28,8 @@ proton-vpn-gtk-app
 slack-desktop-wayland
 slurp
 solaar
+spicetify-cli
+spicetify-marketplace-bin
 spotify
 swappy
 swaybg
