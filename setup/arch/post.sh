@@ -17,6 +17,10 @@ py_versions=(
 uv python install "${py_versions[@]}"
 gum log -l info "[DONE] Installing multiple uv python versions"
 
+gum log -l info "[START] nvim headless install"
+nvim --headless -c 'Lazy install' -c 'qa'
+gum log -l info "[DONE] nvim headless install"
+
 gum log -l info "[START] Spotify file permissions"
 sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
