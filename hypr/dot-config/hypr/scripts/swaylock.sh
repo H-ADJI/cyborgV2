@@ -1,4 +1,5 @@
 #!/bin/sh
+sleep 0.3
 swaylock \
     --screenshots \
     --hide-keyboard-layout \

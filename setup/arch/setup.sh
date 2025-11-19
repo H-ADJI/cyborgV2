@@ -121,6 +121,7 @@ link_dotfiles() {
         "direnv"
         "fuzzel"
         "leetcode"
+        "hypr"
         "ruff"
         "ssh"
         "tmux"
