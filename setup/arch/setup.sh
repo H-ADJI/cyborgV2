@@ -78,15 +78,9 @@ post_install() {
     sudo systemctl enable bluetooth.service
     gum log -l info "[DONE] Enable bluetooth service"
 
-    gum log -l info "[START] Enable greetd display manager service"
-    sudo systemctl enable ly.service -f
-    gum log -l info "[DONE] Enable greetd display manager service"
-
     gum log -l info "[START] Default apps"
     xdg-mime default mupdf.desktop application/pdf
     xdg-mime default imv.desktop image/jpg
-    xdg-mime default brave-browser.desktop text/plain
-    xdg-mime default brave-browser.desktop application/octet-stream
     gum log -l info "[DONE] Default apps"
 }
 decrypt_secrets() {
