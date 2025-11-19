@@ -21,7 +21,7 @@ else
     )
     sudo apt install -y "${toInstall[@]}"
 fi
-gum log -l info "-> Cloning CYBORG"
+gum log -l info "Cloning CYBORG"
 [ ! -d "cyborg" ] && git clone https://github.com/H-ADJI/cyborgV2
 cd cyborg || exit 1
 chmod +x install.sh
