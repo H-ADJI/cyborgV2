@@ -21,11 +21,8 @@ else
     )
     sudo apt install -y "${toInstall[@]}"
 fi
-gum log -l info "Cloning setup repos"
-gum log -l info "-> Cloning DOTFILES"
-[ ! -d "dotfiles" ] && git clone https://github.com/H-ADJI/dotfiles
 gum log -l info "-> Cloning CYBORG"
-[ ! -d "cyborg" ] && git clone https://github.com/H-ADJI/cyborg
+[ ! -d "cyborg" ] && git clone https://github.com/H-ADJI/cyborgV2
 cd cyborg || exit 1
 chmod +x install.sh
 
