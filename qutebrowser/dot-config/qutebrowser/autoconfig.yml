@@ -6,6 +6,8 @@
 
 config_version: 2
 settings:
+  content.desktop_capture:
+    https://mozilla.github.io: true
   content.geolocation:
     https://duckduckgo.com: true
   content.javascript.clipboard:
