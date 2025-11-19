@@ -37,4 +37,4 @@ if [ "$DISTRO" = "arch" ]; then
 else
     dir="ubuntu"
 fi
-bash "$HOME/cyborg/$dir/setup.sh"
+bash "$HOME/cyborgV2/setup/$dir/setup.sh"
