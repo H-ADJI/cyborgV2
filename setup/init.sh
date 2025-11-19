@@ -23,10 +23,8 @@ else
 fi
 gum log -l info "Cloning CYBORG"
 [ ! -d "cyborg" ] && git clone https://github.com/H-ADJI/cyborgV2
-cd cyborg || exit 1
-chmod +x install.sh
+cd cyborgV2 || exit 1
 
-gum log -l info "Dotfiles and Cyborg Repositories Downloaded"
 DISTRO=$(awk '/^ID=/' /etc/*-release | awk -F'=' '{ print tolower($2) }')
 gum log -l info "Cyborg Setup For : $DISTRO"
 if [ "$DISTRO" = "arch" ]; then
