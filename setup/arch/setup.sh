@@ -159,6 +159,7 @@ personal_repos() {
     cd || exit 1
 }
 
+sudo --validate
 install_AUR_helper
 installpackages
 post_install
