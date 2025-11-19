@@ -5,7 +5,7 @@ while read package; do
     gum log -l info "[START] Installing $package"
     yay -Sq --noconfirm --noprogressbar --needed --disable-download-timeout "$package"
     gum log -l info "[DONE] Installing $package"
-done <~/dotfiles/packages/arch/packages-post.txt
+done <~/cyborgV2/setup/arch/other.txt
 
 gum log -l info "[START] installing multiple uv python versions"
 py_versions=(
