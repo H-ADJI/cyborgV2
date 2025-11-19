@@ -22,6 +22,7 @@ return {
         "ruff",
         "bashls",
         "hyprls",
+        "taplo",
       },
     },
     dependencies = {

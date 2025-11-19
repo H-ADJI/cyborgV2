@@ -32,6 +32,7 @@ return {
       sh = { "shfmt", "beautysh" },
       zsh = { "beautysh" },
       bash = { "beautysh" },
+      toml = { "taplo" },
     },
   },
 }
