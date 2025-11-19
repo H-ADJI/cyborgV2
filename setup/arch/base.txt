@@ -4,9 +4,7 @@ alsa-utils
 bat
 bluez
 bluez-utils
-brave-bin
 brightnessctl
-chromium
 cliphist
 docker
 eza

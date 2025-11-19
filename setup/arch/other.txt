@@ -2,8 +2,10 @@ android-tools
 arch-wiki-docs
 bluetui
 bottom
+brave-bin
 btop
 cava
+chromium
 code
 direnv
 evince
