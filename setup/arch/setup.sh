@@ -66,6 +66,10 @@ post_install() {
     sudo timedatectl set-timezone Europe/Paris
     gum log -l info "[DONE] Set timezone"
 
+    gum log -l info "[START] Enable iwd service"
+    sudo systemctl enable --now iwd.service
+    gum log -l info "[DONE] Enable iwd service"
+
     gum log -l info "[START] Enable docker service"
     sudo systemctl enable docker.service
     gum log -l info "[DONE] Enable docker service"
