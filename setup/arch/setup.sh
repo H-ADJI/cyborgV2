@@ -148,6 +148,7 @@ link_dotfiles() {
         "tmux"
         "wlogout"
         "waybar"
+        "scripts"
         "zsh"
     )
     stow --override --dotfiles "${dotfiles[@]}"
