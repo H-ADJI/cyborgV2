@@ -82,7 +82,28 @@ post_install() {
     xdg-mime default mupdf.desktop application/pdf
     xdg-mime default imv.desktop image/jpg
     gum log -l info "[DONE] Default apps"
-    zsh
+    gum log -l info "[START] installing multiple uv python versions"
+    py_versions=(
+        "3.12"
+        "3.11"
+        "3.10"
+        "3.9"
+    )
+    uv python install "${py_versions[@]}"
+    gum log -l info "[DONE] Installing multiple uv python versions"
+
+    gum log -l info "[START] nvim headless install"
+    nvim --headless -c 'Lazy install' -c 'qa'
+    gum log -l info "[DONE] nvim headless install"
+
+    gum log -l info "[START] Spotify file permissions"
+    sudo chmod a+wr /opt/spotify
+    sudo chmod a+wr /opt/spotify/Apps -R
+    gum log -l info "[DONE] Spotify file permissions"
+
+    gum log -l info "[START] Change shell to use ZSH"
+    chsh -s "$(grep -E 'zsh$' /etc/shells | head -n1)"
+    gum log "[DONE] Change shell to use ZSH"
 }
 decrypt_secrets() {
     cd ~/cyborgV2/ || return 1
@@ -129,7 +150,7 @@ link_dotfiles() {
         "waybar"
         "zsh"
     )
-    stow --adopt --dotfiles "${dotfiles[@]}"
+    stow --override --dotfiles "${dotfiles[@]}"
     cd || return 1
 }
 docker_post_install() {
