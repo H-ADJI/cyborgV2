@@ -25,6 +25,7 @@ localsend-bin
 mesa 
 obs-studio
 proton-vpn-gtk-app
+qutebrowser
 slack-desktop-wayland
 slurp
 solaar
