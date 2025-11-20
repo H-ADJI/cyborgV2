@@ -15,7 +15,11 @@
         "format": "{}",
         "max-length": 40
     },
-    "modules-center": ["custom/music", "clock"],
+    "modules-center": ["hyprland/submap", "custom/music", "clock"],
+    "hyprland/submap": {
+        "format": "Mode : [{}]",
+        "tooltip": false
+    },
     "custom/music": {
         "format": " 🎶  {}",
         "escape": true,

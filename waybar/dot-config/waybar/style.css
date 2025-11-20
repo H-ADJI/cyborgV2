@@ -1,5 +1,5 @@
 @define-color highlight #685878;
-@define-color base1 #1C1B1B ;
+@define-color base1 #1C1B1B;
 @define-color yellow #f9e2af;
 
 window#waybar {
@@ -49,7 +49,7 @@ window#waybar {
   background-color: @base1;
   border-radius: 10px;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
-  padding: 0 10px; /* Adds 10px padding on left and right */
+  padding: 3px; /* Adds 10px padding on left and right */
 }
 .modules-right {
   border-radius: 10px;
@@ -84,6 +84,7 @@ window#waybar {
   padding: 0.5rem 0.6rem;
   margin: 1px 0px;
   font-weight: bold;
+  font-size: 16px;
 }
 
 /* -----------------------------------------------------------------------------
@@ -108,7 +109,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  border: 1px solid #d8dee9;
+  border: 3px solid #d8dee9;
 }
 
 #workspaces button.urgent {
@@ -116,11 +117,12 @@ window#waybar {
   color: #c9545d;
 }
 
-#mode {
-  background: #9399b2;
+#submap {
+  background: orange;
   border-bottom: 3px transparent;
-  color: white;
+  color: black;
   margin-left: 5px;
+  padding: 10px; /* Adds 10px padding on left and right */
   font-weight: bold;
 }
 
