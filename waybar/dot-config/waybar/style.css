@@ -70,6 +70,7 @@ window#waybar {
 /* Every modules */
 #mode,
 #network,
+#bluetooth,
 #custom-keyboard-layout,
 #custom-music,
 #idle_inhibitor,
