@@ -136,6 +136,7 @@ link_dotfiles() {
     dotfiles=(
         "alacritty"
         "bin"
+        "swappy"
         "direnv"
         "fastfetch"
         "fuzzel"
