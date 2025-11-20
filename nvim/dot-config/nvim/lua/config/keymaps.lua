@@ -35,7 +35,7 @@ map({ "n" }, "<a-j>", "<c-w>j")
 map({ "n" }, "<a-k>", "<c-w>k")
 
 map({ "n" }, "<a-l>", "<c-w>l")
-
+-- save file
 local formated_diagnostics = function()
   local diagnostic_format = function(diagnostic)
     return string.format("%s [%s]", diagnostic.message, diagnostic.source or "unknown source")
@@ -55,7 +55,7 @@ map("n", "<leader>pd", function()
   vim.diagnostic.jump({ count = -1 })
 end, { desc = "[P]rev [D]iagnostics" })
 
-vim.keymap.set("n", "<leader>pp", function()
+map("n", "<leader>pp", function()
   local file_path = vim.fn.expand("%:p")
   if file_path == "" then
     file_path = "[No file opened]"
@@ -64,7 +64,7 @@ vim.keymap.set("n", "<leader>pp", function()
   vim.fn.setreg("+", file_path)
 end, { desc = "Show and copy current file path" })
 
-vim.keymap.set("n", "<leader>fx", function()
+map("n", "<leader>fx", function()
   local file_path = vim.fn.expand("%:p") -- Full path of current buffer
   if file_path == "" then
     vim.notify("[No file opened]", vim.log.levels.ERROR)
@@ -73,3 +73,7 @@ vim.keymap.set("n", "<leader>fx", function()
   vim.fn.system("chmod +x " .. vim.fn.shellescape(file_path))
   vim.notify("Made " .. file_path .. " executable", vim.log.levels.INFO)
 end, { desc = "Make [F]ile e[X]ecutable (chmod +x)" })
+map({ "i", "x", "n", "s" }, "<C-s>", function()
+  vim.cmd("w")
+  vim.notify("File Saved")
+end, { desc = "Save File" })
