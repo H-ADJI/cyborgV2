@@ -52,6 +52,7 @@ stow
 swaylock-effects
 thunar
 tmux
+tmuxp
 transcrypt
 tree
 ttf-jetbrains-mono 
