@@ -27,7 +27,7 @@ installpackages() {
         gum log -l info "[START] Installing $package"
         yay -Sq --noconfirm --noprogressbar --needed --disable-download-timeout "$package" >>~/yay.log 2>&1
         gum log -l info "[DONE] Installing $package"
-    done <~/cyborgV2/setup/arch/base.txt
+    done <~/cyborgV2/setup/arch/packages.txt
 }
 post_install() {
     gum log -l info "[START] Chosing stable rust toolchain release"
