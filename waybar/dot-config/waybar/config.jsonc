@@ -65,7 +65,7 @@
         "tooltip": "Bluetooth",
         "format-disabled": "", // an empty format will hide the module
         "format-connected": " {device_alias}",
-        "on-click": "~/.config/hypr/scripts/classy_alacritty.sh floatty bluetui",
+        "on-click": "~/.config/scripts/classy_alacritty.sh floatty bluetui",
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
@@ -86,7 +86,7 @@
         "format-ethernet": " {bandwidthDownBits:>} 󰶡 {bandwidthUpBits:>} 󰶣",
         "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}",
         "format-disconnected": " Disconnected",
-        "on-click": "~/.config/hypr/scripts/classy_alacritty.sh floatty impala",
+        "on-click": "~/.config/scripts/classy_alacritty.sh floatty impala",
         "interval": 10
     },
     "cpu": {
@@ -96,13 +96,13 @@
             "warning": 70,
             "critical": 90
         },
-        "on-click": "~/.config/hypr/scripts/classy_alacritty.sh floatty btm"
+        "on-click": "~/.config/scripts/classy_alacritty.sh floatty btm"
     },
     "memory": {
         "interval": 10,
         "format": "RAM : {:>3}%",
         // "on-click": "footclient -T waybar_htop -e htop",
-        "on-click": "~/.config/hypr/scripts/classy_alacritty.sh floatty btm",
+        "on-click": "~/.config/scripts/classy_alacritty.sh floatty btm",
         "states": {
             "warning": 70,
             "critical": 90
