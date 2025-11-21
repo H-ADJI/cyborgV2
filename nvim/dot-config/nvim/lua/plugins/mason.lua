@@ -47,10 +47,10 @@ return {
         "marksman",
         "markdownlint",
         "biome",
+        "pyright",
         -- toml
         "taplo",
         -- python stuff
-        -- "pyright",
         -- golang stuff
         -- "gopls",
         -- "iferr",

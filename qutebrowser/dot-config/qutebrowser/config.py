@@ -76,6 +76,7 @@ c.hints.uppercase = True
 config.bind(",au", "adblock-update")
 config.bind(",s", "config-source")
 config.bind(",mpv", "spawn --detach mpv {url}")
+config.bind(",i", "spawn --userscript images.py")
 # c.editor.command = ["nvim", "{file}"]
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
