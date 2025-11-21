@@ -36,7 +36,7 @@ window#waybar {
   border: none;
   border-radius: 0;
   min-height: 0;
-  margin: 1px;
+  margin: 0px;
   padding: 0;
 }
 
@@ -90,11 +90,6 @@ window#waybar {
 /* -----------------------------------------------------------------------------
  * Module styles
  * -------------------------------------------------------------------------- */
-
-#custom-launcher {
-  margin-left: 15px;
-  margin-right: 10px;
-}
 
 #workspaces {
   font-size: 14px;
