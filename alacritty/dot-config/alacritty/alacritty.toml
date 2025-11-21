@@ -1,9 +1,9 @@
 [env]
 TERM = "xterm-256color"
 [general]
-import = ["~/.config/alacritty/themes/catppuccin_frappe.toml"]
+import = ["~/.config/alacritty/themes/catppuccin.toml"]
 [window]
-opacity = 0.95
+opacity = 0.96
 padding.x = 200
 padding.y = 90
 startup_mode = "Maximized"
