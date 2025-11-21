@@ -3,13 +3,19 @@
     "position": "top", // Waybar position (top|bottom|left|right)
     // "height": 30, // Auto-height is used when commented
     // "width": 1280, // Full screen width when commented
-    "margin": 10,
     "spacing": 20, // Gaps between modules (in px)
+    "margin": 10,
     // See `man waybar` for more configuration options
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "hyprland/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true
+        "all-outputs": true,
+        "show-special": true,
+        "special-visible-only": true,
+        "format": "{icon}",
+        "format-icons": {
+            "special": "Scratch"
+        }
     },
     "hyprland/window": {
         "format": "{}",
