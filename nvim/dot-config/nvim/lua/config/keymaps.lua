@@ -77,3 +77,6 @@ map({ "i", "x", "n", "s" }, "<C-s>", function()
   vim.cmd("w")
   vim.notify("File Saved")
 end, { desc = "Save File" })
+
+map("n", "<C-W>f", "<C-W>_", { desc = "Window Full hight", remap = true })
+map("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
